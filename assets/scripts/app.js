@@ -69,7 +69,7 @@ async function mainProgram(mineID){
         else 
         {
           console.log(`CrabFaction: ${teamFaction} \t MineID: ${currentMineID} \t OwnerAdress: ${minerAddress} \t LastReinforceTime:  ${lastReinforcementTimeInHrs} Hrs`);
-          const mineDetails = `ID: ${currentMineID} => Add: ${minerAddress} => Fact.: ${teamFaction} => LRT:  ${lastReinforcementTimeInHrs} Hrs`;
+          const mineDetails = `ID: ${currentMineID} -> Add: ${minerAddress} -> Fact.: ${teamFaction} -> LRT:  ${lastReinforcementTimeInHrs} Hrs`;
           printMines(mineDetails);
           count++;
           currentResultOutput.textContent = count;
