@@ -1,11 +1,11 @@
 "use-strict";
-
 const defaultResult = 0;
 const apiDelay = 200; //ms
 let currentResult = defaultResult;
 let mineID = 0;
 let mineScanRange = 5000;
 let reinforcementTime = 0;
+let count = 0;
 let faction1 = "MACHINE";
 let faction2 = "";
 const baseURL = "https://idle-game-api.crabada.com/public/idle";
@@ -69,8 +69,10 @@ async function mainProgram(mineID){
         else 
         {
           console.log(`CrabFaction: ${teamFaction} \t MineID: ${currentMineID} \t OwnerAdress: ${minerAddress} \t LastReinforceTime:  ${lastReinforcementTimeInHrs} Hrs`);
-          const mineDetails = `Fact.: ${teamFaction} \t ID: ${currentMineID} \t Add: ${minerAddress} \t LRT:  ${lastReinforcementTimeInHrs} Hrs`;
+          const mineDetails = `Fact.: ${teamFaction} => ID: ${currentMineID} => Add: ${minerAddress} => LRT:  ${lastReinforcementTimeInHrs} Hrs`;
           printMines(mineDetails);
+          count++;
+          currentResultOutput.textContent = count;
         }
       }
     }
